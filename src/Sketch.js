@@ -70,15 +70,16 @@ const Sketch = ({ lightState }) => {
     }, [lightState])
 
     useEffect(() => {
-        if (index >= 0 && index < arrImage.length && lightState)
-            arrImage[index].visible = true;
-        else if (index >= 0 && index < arrImage.length && !lightState) {
-            count = 0;
-            setIndex(-1);
-            for (let i = 0; i < arrImage.length; i++) {
-                arrImage[i].visible = false;
+        if (index >= 0 && index < arrImage.length)
+            if (lightState)
+                arrImage[index].visible = true;
+            else {
+                count = 0;
+                setIndex(-1);
+                for (let i = 0; i < arrImage.length; i++) {
+                    arrImage[i].visible = false;
+                }
             }
-        }
     }, [index, lightState])
 
     return (

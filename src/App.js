@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sketch from "./Sketch";
+import './App.css'
 
 const DrawAnnotations = ({ lightState }) => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={toggleLight}>
+      <button className="button-3" onClick={toggleLight}>
         {lightState ? "Stop " : "Start "}
       </button>
       <DrawAnnotations lightState={lightState} />

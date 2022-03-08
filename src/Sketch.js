@@ -2,31 +2,31 @@ import React, { useState, useEffect } from "react";
 import { Image, Layer, Stage, Rect, Text } from "react-konva";
 import useImage from "use-image";
 
-const width = 900, height = 540;
+const width = 1000, height = 540;
 
 let count = 0;
 
 const arrImage = [
     {
         name: "when-start.png",
-        x: width * (36.2 / 100),
-        y: height * (56.11 / 100),
-        h: height * (10.926 / 100),
-        w: width * (4.2 / 100),
+        x: width * (41 / 100),
+        y: height * (76.2963 / 100),
+        h: height * (17.87 / 100),
+        w: width * (4.6 / 100),
         visible: false
     }, {
         name: "image2-middle.png",
-        x: width * (33.5 / 100),
-        y: height * (33.34 / 100),
-        h: height * (7.037 / 100),
-        w: width * (4.6 / 100),
+        x: width * (37.14 / 100),
+        y: height * (35.37 / 100),
+        h: height * (14.63 / 100),
+        w: width * (6.2 / 100),
         visible: false
     }, {
         name: "image2-start.png",
-        x: width * (33.5 / 100),
-        y: height * (33.34 / 100),
-        h: height * (7.037 / 100),
-        w: width * (4.6 / 100),
+        x: width * (37.14 / 100),
+        y: height * (35.37 / 100),
+        h: height * (14.63 / 100),
+        w: width * (6.2 / 100),
         visible: false
     }];
 

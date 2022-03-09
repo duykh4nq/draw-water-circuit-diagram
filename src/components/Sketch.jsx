@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Image, Layer, Stage, Rect, Text } from "react-konva";
+import React, { useEffect, useState } from "react";
+import { Image, Layer } from "react-konva";
 import useImage from "use-image";
 
 const width = 1000, height = 540;
@@ -83,25 +83,12 @@ const Sketch = ({ lightState }) => {
     }, [index, lightState])
 
     return (
-        <Stage width={width} height={height} >
-            <Layer>
-                <PiantaEdificio />
-            </Layer>
-            <Layer>
-                <InitialImage />
-                <InitialImage2 />
-                <InitialImage3 />
-                <Rect x={width * (36.2 / 100) + 10} y={height * (56.11 / 100) - 20}
-                    width={width * (2 / 100)} height={height * (3.33 / 100)} stroke="black" strokeWidth={1} />
-                <Text
-                    x={width * (36.2 / 100) + 15} y={height * (56.11 / 100) - 20}
-                    width={width * (3 / 100)}
-                    height={height * (3.7037 / 100)}
-                    text="1" fontSize={10}
-                    verticalAlign="middle"
-                />
-            </Layer>
-        </Stage>
+        <Layer>
+            <PiantaEdificio />
+            <InitialImage />
+            <InitialImage2 />
+            <InitialImage3 />
+        </Layer>
     );
 };
 
